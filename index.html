@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda Mejorada</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>Tienda Demo</h1>
+
+    <div class="controls">
+
+      <input type="text" id="searchInput" placeholder="Buscar productos...">
+
+      <select id="brandFilter">
+        <option value="">Todas las marcas</option>
+      </select>
+
+      <select id="sortSelect">
+        <option value="">Ordenar por...</option>
+        <option value="price-asc">Precio: menor a mayor</option>
+        <option value="price-desc">Precio: mayor a menor</option>
+        <option value="rating-desc">Mejor calificados</option>
+      </select>
+
+      <div class="cartIcon" id="openCart">
+        🛒 <span id="cartCount">0</span>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+    <div id="products" class="grid"></div>
+  </main>
+
+  <!-- 🟢 MODAL DEL CARRITO -->
+  <div id="cartModal" class="modal">
+    <div class="modalContent">
+
+      <span id="closeCart" class="closeBtn">✖</span>
+
+      <h2>🛒 Tu Carrito</h2>
+
+      <div id="cartItems"></div>
+
+      <h3>Total: $<span id="cartTotal">0</span></h3>
+      <button id="buyBtn" class="buyBtn">Comprar</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+body {
+  font-family: Arial;
+  margin: 0;
+  background: #f0f0f5;
+}
+
+header {
+  background: #1a1a1a;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.controls select,
+.controls input {
+  padding: 7px;
+  border-radius: 6px;
+  border: none;
+}
+
+.cartIcon {
+  background: white;
+  color: black;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.productCard {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: 0.2s;
+}
+
+.productCard:hover {
+  transform: scale(1.03);
+}
+
+.productCard img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+}
+
+.btn-add {
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  background: #007bff;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-add:hover {
+  background: #005fcc;
+}
+
+/* ----------- MODAL ----------- */
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.65);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; } to { opacity: 1; }
+}
+
+.modalContent {
+  background: white;
+  width: 420px;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 20px;
+  border-radius: 12px;
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.closeBtn {
+  float: right;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.cartItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.qtyButtons button {
+  padding: 5px 10px;
+  margin: 0 4px;
+  border: none;
+  background: #222;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.qtyButtons button:hover {
+  background: #444;
+}
+
+.buy-btn {
+  background: #28a745;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.buy-btn:hover {
+  background: #218838;
+}
+
+.buy-btn:disabled {
+  background: #9ccc9c;
+  cursor: not-allowed;
+}

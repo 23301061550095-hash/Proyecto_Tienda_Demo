@@ -1,4 +1,4 @@
-ienda Demo – Proyecto HTML, CSS y JavaScript
+Tienda Demo – Proyecto HTML, CSS y JavaScript
 
 Este proyecto es una tienda web sencilla creada con HTML, CSS y JavaScript. Incluye un listado de productos, un buscador, filtros por marca, ordenamiento y un carrito funcional con la opción de comprar.
 
